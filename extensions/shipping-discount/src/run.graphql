@@ -1,0 +1,25 @@
+query RunInput {
+  cart {
+    deliveryGroups {
+      id
+      deliveryOptions {
+        handle
+        title
+      }
+      selectedDeliveryOption {
+        handle
+        title
+      }
+    }
+    buyerIdentity {
+      customer {
+        metafield(
+          key: "group"
+          namespace: "custom"
+        ) {
+          value
+        }
+      }
+    }
+  }
+}

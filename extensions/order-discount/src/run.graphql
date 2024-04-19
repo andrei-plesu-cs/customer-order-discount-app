@@ -1,0 +1,14 @@
+query RunInput {
+  cart {
+    buyerIdentity {
+      customer {
+        metafield(
+          key: "group"
+          namespace: "custom"
+        ) {
+          value
+        }
+      }
+    }
+  }
+}
